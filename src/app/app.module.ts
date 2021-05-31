@@ -31,11 +31,11 @@ const appRoutes = [
     FooterComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     FontAwesomeModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true })
+    RouterModule.forRoot(appRoutes, { enableTracing: true, initialNavigation: 'enabled' })
   ],
   providers: [],
   bootstrap: [AppComponent]
